@@ -34,3 +34,8 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: StorageFillEVASuitFsb
+
+- type: entity
+  parent: [ClosetFstEva, StorageFillEVASuitFsc]
+  id: ClosetFscEvaFilled
+  suffix: Filled
