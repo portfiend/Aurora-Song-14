@@ -264,6 +264,15 @@
     - id: DoubleEmergencyTankO2N2EqualFilled
 
 - type: entityTable
+  id: StorageFillEVASuitFsa
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterEVASuitFsa
+    - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMagSecurity
+    - id: DoubleEmergencyTankO2N2EqualFilled
+
+- type: entityTable
   id: StorageFillEVASuitFsb
   table: !type:AllSelector
     children:

@@ -16,6 +16,16 @@
 
 #EVA suit
 - type: entity
+  parent: [ClosetFsaEva] # Aurora's Song - Convert to a NestedSelector
+  id: ClosetFsaEvaFilled
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillEVASuitFsa
+
+- type: entity
   parent: [ClosetFsbEva] # Aurora's Song - Convert to a NestedSelector
   id: ClosetFsbEvaFilled
   suffix: Filled
