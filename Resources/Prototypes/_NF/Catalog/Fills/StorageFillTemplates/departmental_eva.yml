@@ -281,13 +281,10 @@
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
 
-- type: entity
-  abstract: true
+- type: entityTable
   id: StorageFillEVASuitFsc
-  description: Contains a standard issue Far Star Commerce (FSC) EVA suit.
-  components:
-  - type: StorageFill
-    contents:
+  table: !type:AllSelector
+    children:
     - id: ClothingOuterEVASuitFsc
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
