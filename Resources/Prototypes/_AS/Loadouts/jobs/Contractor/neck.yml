@@ -156,3 +156,13 @@
   price: 1000
   equipment:
     neck: ClothingNeckScarfStripedTrans
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedLesbianLong
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedLesbianLong
