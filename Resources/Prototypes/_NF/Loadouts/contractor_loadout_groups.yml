@@ -844,22 +844,27 @@
   - ContractorCigPackBlack
   - ContractorCigPackGreen
   # Start Aurora Song - towels
-  - TowelColorBlack
-  - TowelColorDarkBlue
-  - TowelColorDarkGreen
-  - TowelColorGold
-  - TowelColorGray
-  - TowelColorGreen
-  - TowelColorLightBlue
-  - TowelColorLightBrown
-  - TowelColorMaroon
-  - TowelColorMime
-  - TowelColorOrange
-  - TowelColorPurple
-  - TowelColorRed
-  - TowelColorSilver
-  - TowelColorWhite
-  - TowelColorYellow
+  - ContractorTowelColorBlack
+  - ContractorTowelColorBlue
+  - ContractorTowelColorBrown
+  - ContractorTowelColorDarkBlue
+  - ContractorTowelColorDarkGreen
+  - ContractorTowelColorGold
+  - ContractorTowelColorGray
+  - ContractorTowelColorGreen
+  - ContractorTowelColorLightBlue
+  - ContractorTowelColorLightBrown
+  - ContractorTowelColorMaroon
+  - ContractorTowelColorMime
+  - ContractorTowelColorNT
+  - ContractorTowelColorOrange
+  - ContractorTowelColorPink
+  - ContractorTowelColorPurple
+  - ContractorTowelColorRed
+  - ContractorTowelColorSilver
+  - ContractorTowelColorTeal
+  - ContractorTowelColorWhite
+  - ContractorTowelColorYellow
   # End Aurora Song
   # Start Aurora Song - pride pins
   - ClothingNeckLGBTPin

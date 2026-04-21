@@ -1,0 +1,167 @@
+- type: loadout
+  id: ContractorTowelColorWhite
+  price: 400
+  storage:
+    back:
+    - TowelColorWhite
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorSilver
+  price: 400
+  storage:
+    back:
+    - TowelColorSilver
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorGold
+  price: 400
+  storage:
+    back:
+    - TowelColorGold
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorLightBrown
+  price: 400
+  storage:
+    back:
+    - TowelColorLightBrown
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorGreen
+  price: 400
+  storage:
+    back:
+    - TowelColorGreen
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorDarkBlue
+  price: 400
+  storage:
+    back:
+    - TowelColorDarkBlue
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorOrange
+  price: 400
+  storage:
+    back:
+    - TowelColorOrange
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorLightBlue
+  price: 400
+  storage:
+    back:
+    - TowelColorLightBlue
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorPurple
+  price: 400
+  storage:
+    back:
+    - TowelColorPurple
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorRed
+  price: 400
+  storage:
+    back:
+    - TowelColorRed
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorGray
+  price: 400
+  storage:
+    back:
+    - TowelColorGray
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorBlack
+  price: 400
+  storage:
+    back:
+    - TowelColorBlack
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorDarkGreen
+  price: 400
+  storage:
+    back:
+    - TowelColorDarkGreen
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorMaroon
+  price: 400
+  storage:
+    back:
+    - TowelColorMaroon
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorYellow
+  price: 400
+  storage:
+    back:
+    - TowelColorYellow
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorMime
+  price: 400
+  storage:
+    back:
+    - TowelColorMime
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorBlue
+  price: 400
+  storage:
+    back:
+    - TowelColorBlue
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorBrown
+  price: 400
+  storage:
+    back:
+    - TowelColorBrown
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorNT
+  price: 400
+  storage:
+    back:
+    - TowelColorNT
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorPink
+  price: 400
+  storage:
+    back:
+    - TowelColorPink
+  groupBy: towels
+
+- type: loadout
+  id: ContractorTowelColorTeal
+  price: 400
+  storage:
+    back:
+    - TowelColorTeal
+  groupBy: towels
