@@ -330,6 +330,7 @@
   - ContractorClothingOuterApronBar
   - ContractorClothingOuterApronBotanist
   - ContractorClothingOuterApronChef
+  - ContractorClothingOuterVest # Aurora Song
   - ContractorClothingOuterHoodieBlack
   - ContractorClothingOuterCoatJensen
   - ContractorClothingOuterCoatGentle
@@ -340,6 +341,7 @@
   - ContractorClothingOuterCoatLabGene
   - ContractorClothingOuterCoatLabChem
   # - ContractorClothingOuterCoatLabRnd
+  - ContractorClothingOuterCoatRnd # Aurora Song
   - ContractorClothingOuterCoatRobo
   - ContractorClothingOuterCoatLabViro
   - ContractorClothingOuterBioScientist
@@ -552,6 +554,8 @@
   - ContractorClothingHeadHatSombrero
   - ContractorClothingHeadFishCap
   - ContractorClothingHeadHatTrucker
+  - ContractorFoodPoppy # Aurora Song
+  - ContractorFoodLily # Aurora Song
   - ContractorClothingHeadHatCasa
   - ContractorClothingHeadHatBowlerHat
   - ContractorClothingHeadHatGreyFlatcap
@@ -668,6 +672,24 @@
   - ContractorClothingNeckScarfStripedBlue
   - ContractorClothingNeckScarfStripedBrown
   - ContractorClothingNeckScarfStripedGreen
+  # Start Aurora Song - scarfs
+  - ContractorClothingNeckScarfStripedLightBlue
+  - ContractorClothingNeckScarfStripedOrange
+  - ContractorClothingNeckScarfStripedPurple
+  - ContractorClothingNeckScarfStripedRed
+  - ContractorClothingNeckScarfStripedZebra
+  - ContractorClothingNeckScarfStripedAce
+  - ContractorClothingNeckScarfStripedAro
+  - ContractorClothingNeckScarfStripedAroace
+  - ContractorClothingNeckScarfStripedBiSexual
+  - ContractorClothingNeckScarfStripedGay
+  - ContractorClothingNeckScarfStripedInter
+  - ContractorClothingNeckScarfStripedLesbian
+  - ContractorClothingNeckScarfStripedNonBinary
+  - ContractorClothingNeckScarfStripedPan
+  - ContractorClothingNeckScarfStripedRainbow
+  - ContractorClothingNeckScarfStripedTrans
+  # End Aurora Song
   - ContractorClothingNeckTieBH
   - ContractorClothingNeckTieRed
   - ContractorClothingNeckTieSci
@@ -694,24 +716,26 @@
   - ContractorClothingNeckCloakGay
   - ContractorClothingNeckCloakLesbian
   - ContractorBedsheetRainbow
-  - ClothingNeckLGBTPin
-  - ClothingNeckAllyPin
-  - ClothingNeckAromanticPin
-  - ClothingNeckAsexualPin
-  - ClothingNeckAroacePin
-  - ClothingNeckBisexualPin
-  - ClothingNeckGayPin
-  - ClothingNeckIntersexPin
-  - ClothingNeckLesbianPin
-  - ClothingNeckNonBinaryPin
-  - ClothingNeckPansexualPin
-  - ClothingNeckPluralPin
-  - ClothingNeckOmnisexualPin
-  - ClothingNeckGenderqueerPin
-  - ClothingNeckGenderfluidPin
-  - ClothingNeckTransPin
-  - ClothingNeckAutismPin
-  - ClothingNeckGoldAutismPin
+  # Start Aurora Song - move to backpack
+  # - ClothingNeckLGBTPin
+  # - ClothingNeckAllyPin
+  # - ClothingNeckAromanticPin
+  # - ClothingNeckAsexualPin
+  # - ClothingNeckAroacePin
+  # - ClothingNeckBisexualPin
+  # - ClothingNeckGayPin
+  # - ClothingNeckIntersexPin
+  # - ClothingNeckLesbianPin
+  # - ClothingNeckNonBinaryPin
+  # - ClothingNeckPansexualPin
+  # - ClothingNeckPluralPin
+  # - ClothingNeckOmnisexualPin
+  # - ClothingNeckGenderqueerPin
+  # - ClothingNeckGenderfluidPin
+  # - ClothingNeckTransPin
+  # - ClothingNeckAutismPin
+  # - ClothingNeckGoldAutismPin
+  # End Aurora Song
   - ContractorClothingNeckIFFNeutral
   - ContractorClothingNeckIFFGreen
   - ContractorClothingNeckIFFRed
@@ -818,6 +842,44 @@
   - ContractorCigPackRed
   - ContractorCigPackBlack
   - ContractorCigPackGreen
+  # Start Aurora Song - towels
+  - TowelColorBlack
+  - TowelColorDarkBlue
+  - TowelColorDarkGreen
+  - TowelColorGold
+  - TowelColorGray
+  - TowelColorGreen
+  - TowelColorLightBlue
+  - TowelColorLightBrown
+  - TowelColorMaroon
+  - TowelColorMime
+  - TowelColorOrange
+  - TowelColorPurple
+  - TowelColorRed
+  - TowelColorSilver
+  - TowelColorWhite
+  - TowelColorYellow
+  # End Aurora Song
+  # Start Aurora Song - pride pins
+  - ClothingNeckLGBTPin
+  - ClothingNeckAllyPin
+  - ClothingNeckAromanticPin
+  - ClothingNeckAsexualPin
+  - ClothingNeckAroacePin
+  - ClothingNeckBisexualPin
+  - ClothingNeckGayPin
+  - ClothingNeckIntersexPin
+  - ClothingNeckLesbianPin
+  - ClothingNeckNonBinaryPin
+  - ClothingNeckPansexualPin
+  - ClothingNeckPluralPin
+  - ClothingNeckOmnisexualPin
+  - ClothingNeckGenderqueerPin
+  - ClothingNeckGenderfluidPin
+  - ClothingNeckTransPin
+  - ClothingNeckAutismPin
+  - ClothingNeckGoldAutismPin
+  # End Aurora Song
   - ContractorCaseMantisCandles  # Aurora Song - Mantis drip merge
   - ContractorCaseMantisTools  # Aurora Song - Mantis drip merge
   - ContractorFlippoLighterMantis  # Aurora Song - Mantis drip merge

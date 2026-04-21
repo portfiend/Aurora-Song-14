@@ -1,0 +1,23 @@
+- type: loadout
+  id: ContractorFoodPoppy
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 650
+  equipment:
+    head: FoodPoppy
+
+- type: loadout
+  id: ContractorFoodLily
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 650
+  equipment:
+    head: FoodLily

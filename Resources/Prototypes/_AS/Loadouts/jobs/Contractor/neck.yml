@@ -1,0 +1,158 @@
+# scarves
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedRed
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    neck: ClothingNeckScarfStripedRed
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedLightBlue
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    neck: ClothingNeckScarfStripedLightBlue
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedOrange
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    neck: ClothingNeckScarfStripedOrange
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedPurple
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    neck: ClothingNeckScarfStripedPurple
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedZebra
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    neck: ClothingNeckScarfStripedZebra
+
+## pride scarves
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedAce
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedAce
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedAro
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedAro
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedAroace
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedAroace
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedBiSexual
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedBiSexual
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedGay
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedGay
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedInter
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedInter
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedLesbian
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedLesbian
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedNonBinary
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedNonBinary
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedPan
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedPan
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedRainbow
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedRainbow
+
+- type: loadout
+  id: ContractorClothingNeckScarfStripedTrans
+  groupBy: prideScarfs
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 1000
+  equipment:
+    neck: ClothingNeckScarfStripedTrans
