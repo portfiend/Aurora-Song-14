@@ -1,0 +1,29 @@
+- type: bountyContractCategory
+  id: Criminal
+  name: bounty-contracts-category-criminal
+  announcement: bounty-contracts-announcement-criminal-create
+  uiColor: "#520c0c"
+
+- type: bountyContractCategory
+  id: Vacancy
+  name: bounty-contracts-category-vacancy
+  announcement: bounty-contracts-announcement-vacancy-create
+  uiColor: "#003866"
+
+- type: bountyContractCategory
+  id: Construction
+  name: bounty-contracts-category-construction
+  announcement: bounty-contracts-announcement-construction-create
+  uiColor: "#664a06"
+
+- type: bountyContractCategory
+  id: Service
+  name: bounty-contracts-category-service
+  announcement: bounty-contracts-announcement-service-create
+  uiColor: "#01551e"
+
+- type: bountyContractCategory
+  id: Other
+  name: bounty-contracts-category-other
+  announcement: bounty-contracts-announcement-generic-create
+  uiColor: "#3c3c3c"
