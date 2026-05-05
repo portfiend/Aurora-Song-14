@@ -28,10 +28,17 @@ public sealed partial class BountyContractCategoryPrototype : IPrototype
     ///     A locale corresponding to some text that is displayed when this bounty is created.
     /// </summary>
     [DataField]
-    public LocId Announcement = string.Empty;
+    public LocId? Announcement = null;
 
     /// <summary>
     ///     The background color of bounties with this category in the UI.
     /// </summary>
+    [DataField]
     public Color UiColor = Color.White;
+
+    /// <summary>
+    ///     Whether or not the name of the bounty should be custom by default.
+    /// </summary>
+    [DataField]
+    public bool CustomNameDefault = true;
 }
