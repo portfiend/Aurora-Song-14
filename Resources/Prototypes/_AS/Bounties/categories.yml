@@ -28,3 +28,27 @@
   name: bounty-contracts-category-other
   announcement: bounty-contracts-announcement-generic-create
   uiColor: "#3c3c3c"
+
+- type: bountyContractCategory
+  id: Donation
+  name: bounty-contracts-category-donation
+  announcement: bounty-contracts-announcement-donation-create
+  uiColor: "#4d3868"
+
+- type: bountyContractCategory
+  id: Promotion
+  name: bounty-contracts-category-promotion
+  announcement: bounty-contracts-announcement-promotion-create
+  uiColor: "#6b3245"
+
+- type: bountyContractCategory
+  id: Target
+  name: bounty-contracts-category-target
+  announcement: bounty-contracts-announcement-target-create
+  uiColor: "#5b3216"
+
+- type: bountyContractCategory
+  id: Trade
+  name: bounty-contracts-category-trade
+  announcement: bounty-contracts-announcement-trade-create
+  uiColor: "#19544d"
