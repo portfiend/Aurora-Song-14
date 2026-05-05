@@ -47,6 +47,14 @@ public sealed partial class BountyContractUiFragmentCreate : Control
 
         _collection = collection;
 
+        // start Aurora Song - account for category changes
+        _proto.PrototypesReloaded += args =>
+        {
+            if (args.WasModified<BountyContractCategoryPrototype>())
+                FillCategories(); // This will refresh the category collection.
+        };
+        // end Aurora Song
+
         FillCategories();
         UpdateDisclaimer();
     }
@@ -111,7 +119,7 @@ public sealed partial class BountyContractUiFragmentCreate : Control
         // start Aurora Song - use prototypes
 
         // We're clearing this out to make sure we have a clean slate and we're up-to-date on categories.
-        CategorySelector.RemoveAllChildren();
+        CategorySelector.Clear();
         CacheCategoryPrototypes();
 
         foreach (var id in collectionProto.Categories)
