@@ -3,6 +3,7 @@
   name: bounty-contracts-category-criminal
   announcement: bounty-contracts-announcement-criminal-create
   uiColor: "#520c0c"
+  customNameDefault: false
 
 - type: bountyContractCategory
   id: Vacancy
