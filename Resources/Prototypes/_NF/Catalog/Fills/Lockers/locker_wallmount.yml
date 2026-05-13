@@ -396,9 +396,14 @@
   suffix: Frontier, Empty
 
 - type: entity
-  parent: [ LockerWallEVAColorFsc, StorageFillEVASuitFsc ]
+  parent: [ LockerWallEVAColorFsc ]
   id: LockerWallEVAColorFscFilled
   suffix: Frontier, Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitFsc
 
 - type: entity
   parent: [ LockerWallEVAColorFsc ]
