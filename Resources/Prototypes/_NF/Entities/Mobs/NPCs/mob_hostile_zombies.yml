@@ -1,19 +1,21 @@
 # region base
 - type: entity
+  parent: [ MobPassiveRegenStrong ] # Aurora's Song - Use inheritance more wisely
   id: MobPassiveRegenZombie
   abstract: true
   components:
   - type: PassiveDamage
-    allowedStates:
-    - Alive
-    - Critical
-    - Dead
-    damageCap: 9999
     damage:
-      groups:
-        Brute: -0.4
-        Burn: -0.2
-        Airloss: -1
+      types: # Aurora's Song - Convert from groups to types
+        Blunt: -0.14
+        Slash: -0.13
+        Piercing: -0.13
+        Heat: -0.05
+        Shock: -0.05
+        Cold: -0.05
+        Caustic: -0.05
+        Asphyxiation: -0.5
+        Bloodloss: -0.5
 
 - type: entity
   abstract: true
@@ -72,8 +74,10 @@
     - id: NFSpawnZombieLoot
       amount: 1
   - type: Bloodstream
-    bloodReagent: ZombieBlood
-    bloodMaxVolume: 250
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: ZombieBlood
+        Quantity: 250
     bloodlossDamage:
       types:
         Bloodloss:
@@ -667,8 +671,10 @@
       Dead:
         Base: odysseus-broken
   - type: Bloodstream
-    bloodReagent: WeldingFuel
-    bloodMaxVolume: 100
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 100
   - type: Timer
   - type: TimedSpawner
     prototypes:
@@ -698,7 +704,7 @@
           NFSpawnZombiePile:
             min: 1
             max: 1
-          RipleyChassis:
+          ASSpawnRipleyParts: # Aurora's Song - RipleyChassis>ASSpawnRipleyParts
             min: 1
             max: 1
           RipleyCentralElectronics:

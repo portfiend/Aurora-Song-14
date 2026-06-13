@@ -34,11 +34,9 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
 {
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
     [Dependency] private readonly AudioSystem _audio = default!; // Aurora
-    [Dependency] private readonly AccessReaderSystem _reader = default!; // Aurora
     [Dependency] private readonly PopupSystem _popup = default!; // Aurora
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly HandsSystem _hands = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!; // Aurora
     [Dependency] private readonly StackSystem _stack = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
@@ -279,7 +277,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         if (component.RewardType != null) // If we have a primary reward, spawn it
         {
             var rewardPrototype = _protoMan.Index<StackPrototype>(component.RewardType);
-            var stackUid = _stack.Spawn(reward, rewardPrototype, output);
+            var stackUid = _stack.SpawnAtPosition(reward, rewardPrototype, output);
             if (outputSent == false)
             {
                 if (!_hands.TryPickupAnyHand(args.Actor, stackUid)) // If there wasn't a a ScuOutputComponent to send these too, try to pick them up
@@ -295,7 +293,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         if (component.RewardTypeAlternate != null) // If we have an alternate currency, spawn it
         {
             var altRewardPrototype = _protoMan.Index<StackPrototype>(component.RewardTypeAlternate);
-            var altStackUid = _stack.Spawn(altReward, altRewardPrototype, args.Actor.ToCoordinates());
+            var altStackUid = _stack.SpawnAtPosition(altReward, altRewardPrototype, args.Actor.ToCoordinates());
             if (!_hands.TryPickupAnyHand(args.Actor, altStackUid))
                 _transform.SetLocalRotation(altStackUid, Angle.Zero); // Orient these to grid north instead of map north if we can't pick them up
         } // End AS
@@ -324,7 +322,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         {
             var stackPrototype = _protoMan.Index<StackPrototype>(ent.Comp.RewardType);
             // 1 SCU per registered item
-            var stackUid = _stack.Spawn(toRegister.Count, stackPrototype, _scuOutput.ToCoordinates());
+            var stackUid = _stack.SpawnAtPosition(toRegister.Count, stackPrototype, _scuOutput.ToCoordinates());
 
             _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
         }
@@ -357,7 +355,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                 }
             }
 
-            Del(oldEnt);
+            QueueDel(oldEnt); // Aurora's Song - Replace Del with QueueDel as a potential fix for registration duplication
             Log.Debug($"{ent.Comp.Faction} registered {oldEnt} into {newEnt}");
         }
 

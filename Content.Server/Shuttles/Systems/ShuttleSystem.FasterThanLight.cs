@@ -6,13 +6,11 @@ using Content.Server._NF.PublicTransit.Components; // AS
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Station.Events;
-using Content.Shared.Body.Components;
+using Content.Shared.Body;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
-using Content.Shared.Ghost;
 using Content.Shared.Implants; // Coyote
 using Content.Shared.Implants.Components; // Coyote
-using Content.Shared.Maps;
 using Content.Shared.Mobs.Components; // Coyote
 using Content.Shared.Parallax;
 using Content.Shared.Shuttles.Components;
@@ -41,6 +39,9 @@ namespace Content.Server.Shuttles.Systems;
 public sealed partial class ShuttleSystem
 {
     [Dependency] private readonly SharedPopupSystem _popup = default!; // AS
+
+    [Dependency] private readonly EntityManager _entity = default!;
+
     /*
      * This is a way to move a shuttle from one location to another, via an intermediate map for fanciness.
      */
@@ -66,6 +67,7 @@ public sealed partial class ShuttleSystem
     public float DefaultTravelTime;
     public float DefaultArrivalTime;
     //private float FTLCooldown; // Mono
+    private TimeSpan ArrivalsFTLCooldown;
     public float FTLMassLimit;
     private TimeSpan _hyperspaceKnockdownTime = TimeSpan.FromSeconds(5);
 
@@ -116,7 +118,8 @@ public sealed partial class ShuttleSystem
         _cfg.OnValueChanged(CCVars.FTLStartupTime, time => DefaultStartupTime = time, true);
         _cfg.OnValueChanged(CCVars.FTLTravelTime, time => DefaultTravelTime = time, true);
         _cfg.OnValueChanged(CCVars.FTLArrivalTime, time => DefaultArrivalTime = time, true);
-        //_cfg.OnValueChanged(CCVars.FTLCooldown, time => FTLCooldown = time, true); Monolith FTL Drive sets cooldown
+        // _cfg.OnValueChanged(CCVars.FTLCooldown, time => FTLCooldown = TimeSpan.FromSeconds(time), true); Monolith FTL Drive sets cooldown
+        _cfg.OnValueChanged(CCVars.ArrivalsFTLCooldown, time => ArrivalsFTLCooldown = TimeSpan.FromSeconds(time), true);
         _cfg.OnValueChanged(CCVars.FTLMassLimit, time => FTLMassLimit = time, true);
         _cfg.OnValueChanged(CCVars.HyperspaceKnockdownTime, time => _hyperspaceKnockdownTime = TimeSpan.FromSeconds(time), true);
     }
@@ -284,7 +287,7 @@ public sealed partial class ShuttleSystem
         }
 
         // Mono: Check if the shuttle is in an expedition
-        if (TryComp<TransformComponent>(shuttleUid, out var xform) &&
+        if (_entity.TryGetComponent<TransformComponent>(shuttleUid, out var xform) &&
             xform.MapUid != null &&
             HasComp<SalvageExpeditionComponent>(xform.MapUid))
         {
@@ -824,7 +827,7 @@ public sealed partial class ShuttleSystem
         // Docking FTL
         else if (HasComp<MapGridComponent>(target.EntityId) && !HasComp<MapComponent>(target.EntityId))
         {
-            var config = _dockSystem.GetDockingConfigAt(uid, target.EntityId, target, comp.TargetAngle);
+            var config = _dockSystem.GetDockingConfigAt(uid, target.EntityId, target, comp.TargetAngle, priorityTag: entity.Comp1.PriorityTag); // Aurora's Song: Priority Discrimination
             var mapCoordinates = _transform.ToMapCoordinates(target);
 
             // Couldn't dock somehow so just fallback to regular position FTL.
@@ -1516,7 +1519,7 @@ public sealed partial class ShuttleSystem
                 {
                     _logger.Add(LogType.Gib, LogImpact.Extreme, $"{ToPrettyString(ent):player} got gibbed by the shuttle" +
                                                                 $" {ToPrettyString(uid)} arriving from FTL at {xform.Coordinates:coordinates}");
-                    var gibs = _bobby.GibBody(ent, body: mob);
+                    var gibs = _gibbing.Gib(ent);
                     _immuneEnts.UnionWith(gibs);
                     continue;
                 }

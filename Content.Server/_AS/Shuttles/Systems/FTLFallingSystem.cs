@@ -12,6 +12,7 @@ using Content.Shared.Ghost;
 using Content.Shared.Silicons.StationAi;
 using Content.Server.GameTicking;
 using Content.Server.Pointing.Components;
+using Content.Shared.Damage.Systems;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
@@ -43,6 +44,7 @@ public sealed class FTLFallingSystem : EntitySystem
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
+    [Dependency] private readonly EntityManager _entity = default!; // Aurora's Song
 
     public override void Initialize()
     {
@@ -63,7 +65,7 @@ public sealed class FTLFallingSystem : EntitySystem
                 continue;
 
             RemComp<FTLFallingComponent>(uid);
-            if (!TryComp<TransformComponent>(uid, out var xform))
+            if (!_entity.TryGetComponent<TransformComponent>(uid, out var xform)) // Aurora's Song
                 return;
 
             if (!_mapSystem.TryGetMap(_gameTicker.DefaultMap, out var mapUid))
