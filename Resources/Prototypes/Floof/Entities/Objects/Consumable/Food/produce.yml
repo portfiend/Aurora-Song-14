@@ -29,6 +29,10 @@
   - type: Tag
     tags:
     - Fruit
+  - type: FoodSequenceElement
+    entries:
+      Burger: Pomegranate
+      Taco: Pomegranate
 
 - type: entity # Floofstation
   name: pomegranate slice
@@ -59,3 +63,7 @@
   - type: Tag
     tags:
     - Fruit
+  - type: FoodSequenceElement
+    entries:
+      Burger: PomegranateSlice
+      Taco: PomegranateSlice
