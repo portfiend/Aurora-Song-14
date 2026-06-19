@@ -45,7 +45,7 @@
       - sweet
       - spooky
   - type: Sprite
-    sprite: Floof/Objects/Specific/Hydroponics/pomegranate.rsi
+    sprite: Objects/Specific/Hydroponics/pomegranate.rsi
   - type: SolutionContainerManager
     solutions:
       food:
