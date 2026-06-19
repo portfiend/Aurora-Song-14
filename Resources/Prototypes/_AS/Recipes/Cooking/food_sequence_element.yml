@@ -11,7 +11,7 @@
   id: PomegranateSlice
   name: food-sequence-content-pomegranate-slice
   sprites:
-  - sprite: Floof/Objects/Specific/Hydroponics/pomegranate.rsi
+  - sprite: Objects/Specific/Hydroponics/pomegranate.rsi
     state: slice
   tags:
   - Fruit
