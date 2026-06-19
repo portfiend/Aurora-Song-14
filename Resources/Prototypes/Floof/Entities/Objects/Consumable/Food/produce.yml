@@ -33,6 +33,11 @@
     entries:
       Burger: Pomegranate
       Taco: Pomegranate
+  # TODO: there is going to be an upstream refactor to the way butchering and slicing things works.
+  # when this happens please change this to ToolRefinable. thank you.
+  - type: SliceableFood
+    count: 2
+    slice: FoodPomegranateSlice
 
 - type: entity # Floofstation
   name: pomegranate slice
