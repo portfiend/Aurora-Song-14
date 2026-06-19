@@ -68,6 +68,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Slice
   - type: FoodSequenceElement
     entries:
       Burger: PomegranateSlice
